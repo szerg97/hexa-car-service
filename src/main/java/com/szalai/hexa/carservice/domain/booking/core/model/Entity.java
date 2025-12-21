@@ -1,5 +1,5 @@
 package com.szalai.hexa.carservice.domain.booking.core.model;
 
-public interfaceEntity {
+public interface Entity {
     String getId();
 }

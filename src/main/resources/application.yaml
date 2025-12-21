@@ -1,1 +1,7 @@
-spring.application.name=carservice
+server:
+  port: 8080
+  servlet:
+    context-path: /car-service
+spring:
+  application:
+    name: car-service
