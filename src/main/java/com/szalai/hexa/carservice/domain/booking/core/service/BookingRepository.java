@@ -1,4 +1,4 @@
-package com.szalai.hexa.carservice.domain.booking.core.port.outgoing;
+package com.szalai.hexa.carservice.domain.booking.core.service;
 
 import com.szalai.hexa.carservice.domain.booking.core.model.Booking;
 

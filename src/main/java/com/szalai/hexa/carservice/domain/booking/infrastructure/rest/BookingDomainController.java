@@ -1,8 +1,8 @@
-package com.szalai.hexa.carservice.domain.booking.application;
+package com.szalai.hexa.carservice.domain.booking.infrastructure.rest;
 
-import com.szalai.hexa.carservice.domain.booking.core.model.NewAppointmentRequest;
-import com.szalai.hexa.carservice.domain.booking.core.port.incoming.BookNewAppointment;
+import com.szalai.hexa.carservice.domain.booking.application.usecase.BookNewAppointment;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,6 +21,9 @@ public class BookingDomainController {
     @PostMapping
     public ResponseEntity<String> bookNewAppointment(@RequestBody NewAppointmentRequest request) {
         bookNewAppointment.handle(request);
-        return ResponseEntity.status(CREATED).body("Appointment booked successfully");
+        return ResponseEntity
+                .status(CREATED)
+                .contentType(MediaType.TEXT_PLAIN)
+                .body("Appointment booked successfully");
     }
 }

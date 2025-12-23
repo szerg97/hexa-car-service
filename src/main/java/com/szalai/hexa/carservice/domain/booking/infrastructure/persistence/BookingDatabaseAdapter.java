@@ -1,9 +1,9 @@
-package com.szalai.hexa.carservice.domain.booking.infrastructure;
+package com.szalai.hexa.carservice.domain.booking.infrastructure.persistence;
 
 import com.szalai.hexa.carservice.domain.booking.core.model.Booking;
 import com.szalai.hexa.carservice.domain.booking.core.model.Car;
 import com.szalai.hexa.carservice.domain.booking.core.model.Driver;
-import com.szalai.hexa.carservice.domain.booking.core.port.outgoing.BookingRepository;
+import com.szalai.hexa.carservice.domain.booking.core.service.BookingRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;

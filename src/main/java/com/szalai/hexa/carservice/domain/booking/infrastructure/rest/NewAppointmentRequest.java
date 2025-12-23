@@ -1,4 +1,4 @@
-package com.szalai.hexa.carservice.domain.booking.core.model;
+package com.szalai.hexa.carservice.domain.booking.infrastructure.rest;
 
 import java.time.LocalDateTime;
 

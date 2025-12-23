@@ -1,11 +1,9 @@
-package com.szalai.hexa.carservice.domain.booking.core;
+package com.szalai.hexa.carservice.domain.booking.core.service;
 
 import com.szalai.hexa.carservice.domain.booking.core.model.Booking;
 import com.szalai.hexa.carservice.domain.booking.core.model.Car;
 import com.szalai.hexa.carservice.domain.booking.core.model.Driver;
-import com.szalai.hexa.carservice.domain.booking.core.model.NewAppointmentRequest;
-import com.szalai.hexa.carservice.domain.booking.core.port.incoming.BookNewAppointment;
-import com.szalai.hexa.carservice.domain.booking.core.port.outgoing.BookingRepository;
+import com.szalai.hexa.carservice.domain.booking.infrastructure.rest.NewAppointmentRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,11 +13,10 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-public class BookingFacade implements BookNewAppointment {
+public class BookingFacade {
 
     private final BookingRepository bookingRepository;
 
-    @Override
     public void handle(NewAppointmentRequest request) {
         List<Booking> bookings = bookingRepository.findAll();
 
